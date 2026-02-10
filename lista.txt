@@ -1,17 +1,19 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="" tvg-name="Pasárgada" tvg-logo="https://image.tmdb.org/t/p/w600_and_h900_bestv2/1TK4KTXt3mQAgq09GxmohNz9PTM.jpg" group-title="Filmes | Nacionais",Pasárgada
-http://hubby.cx:80/movie/playcine-vods/gKQJjXulgb/644196.mp4
-#EXTINF:-1 tvg-id="" tvg-name="A Casa da Árvore" tvg-logo="http://image.tmdb.org//t/p/w600_and_h900_bestv2/gG7OCpt6hwp8DA2cfYs2kFhtpcZ.jpg" group-title="Filmes | Nacionais",A Casa da Árvore
-http://hubby.cx:80/movie/playcine-vods/gKQJjXulgb/644197.mp4
-#EXTINF:-1 tvg-id="" tvg-name="Uma Noite Não é Nada" tvg-logo="http://image.tmdb.org//t/p/w600_and_h900_bestv2/4gAeS6GhBmJJkCAgspP1bpFHFgB.jpg" group-title="Filmes | Nacionais",Uma Noite Não é Nada
-http://hubby.cx:80/movie/playcine-vods/gKQJjXulgb/644198.mp4
-#EXTINF:-1 tvg-id="" tvg-name="Passagrana" tvg-logo="http://image.tmdb.org//t/p/w600_and_h900_bestv2/g9tAi6v6cinBDItrW0fW4HoweNq.jpg" group-title="Filmes | Nacionais",Passagrana
-http://hubby.cx:80/movie/playcine-vods/gKQJjXulgb/644199.mp4
-#EXTINF:-1 tvg-id="" tvg-name="Cabrito" tvg-logo="http://image.tmdb.org//t/p/w600_and_h900_bestv2/5509S5iHCcdASVsjxfAa3pZEqbA.jpg" group-title="Filmes | Nacionais",Cabrito
-http://hubby.cx:80/movie/playcine-vods/gKQJjXulgb/644200.mp4
-#EXTINF:-1 tvg-id="" tvg-name="Ainda Somos os Mesmos" tvg-logo="http://image.tmdb.org//t/p/w600_and_h900_bestv2/zV9lYXZ7lO2TSL3HljbSvW5UVbf.jpg" group-title="Filmes | Nacionais",Ainda Somos os Mesmos
-http://hubby.cx:80/movie/playcine-vods/gKQJjXulgb/644201.mp4
-#EXTINF:-1 tvg-id="" tvg-name="Grande Sertão" tvg-logo="http://image.tmdb.org//t/p/w600_and_h900_bestv2/zVtQgPN7KZn4f9oE2nVFVYx4Hqw.jpg" group-title="Filmes | Nacionais",Grande Sertão
-http://hubby.cx:80/movie/playcine-vods/gKQJjXulgb/644202.mp4
-#EXTINF:-1 tvg-id="" tvg-name="Noé - Uma Adaptação da Novela Gênesis" tvg-logo="http://image.tmdb.org//t/p/w600_and_h900_bestv2/5laTANyEApcIFj3xeP0tcwYyb00.jpg" group-title="Filmes | Nacionais",Noé - Uma Adaptação da Novela Gênesis
-http://hubby.cx:80/movie/playcine-vods/gKQJjXulgb/644203.mp4
+
+#EXTINF:-1 group-title="Louvores",Nadando na Graça
+https://drive.google.com/uc?export=download&id=15v0oz0ygFBPvJZn20tADLSmanW8KNDuf
+
+#EXTINF:-1 group-title="Louvores",Faz Muito Tempo
+https://drive.google.com/uc?export=download&id=1a3yMgVVnz6xRyFbq30eRhFltSUX17xUi
+
+#EXTINF:-1 group-title="Louvores",Quem Ama
+https://drive.google.com/uc?export=download&id=1hDzqVmi2C0YcAUMhzxeepWid1a4xhjQZ
+
+#EXTINF:-1 group-title="Louvores",Ele Faz
+https://drive.google.com/uc?export=download&id=1VuIQJrHK-sx8K2affSttarTc7z78b7EY
+
+#EXTINF:-1 group-title="Louvores",Cristo Passará
+https://drive.google.com/uc?export=download&id=1WaCv-hT5-GpD2_PhWhL4AUwgjCGUamLO
+
+#EXTINF:-1 group-title="Louvores",Deus Cuida de Mim
+https://drive.google.com/uc?export=download&id=1_JmxKddPOovJSwnmOVxFIhQGsRKP_RPr
