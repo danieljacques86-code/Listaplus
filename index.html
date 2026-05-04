@@ -1,264 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Media Center</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
-
-/* FUNDO */
-body {
-    background: url("https://wsbit.net/core/img/fundo.png") no-repeat center center fixed;
-    background-size: cover;
-}
-
-/* OVERLAY */
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
-    z-index: 1;
-}
-
-/* CONTAINER */
-.container {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* MENU */
-.menu {
-    display: flex;
-    gap: clamp(30px, 3vw, 80px);
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* ITENS PRINCIPAIS */
-.item {
-    width: clamp(160px, 22vw, 260px);
-    height: clamp(160px, 22vw, 260px);
-    background: rgba(0,0,0,0.45);
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.item:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 30px rgba(0,120,255,0.8);
-}
-
-.item img {
-    width: clamp(90px, 14vw, 190px);
-}
-
-/* RODAPÉ */
-.footer {
-    position: absolute;
-    bottom: 40px;
-    display: flex;
-    gap: clamp(40px, 6vw, 60px);
-}
-
-.footer .small {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer img {
-    width: clamp(45px, 6vw, 70px);
-}
-
-.footer span {
-    margin-top: 6px;
-    color: white;
-    font-size: clamp(11px, 1.8vw, 14px);
-}
-
-a {
-    text-decoration: none;
-}
-
-/* 📱 CELULAR PEQUENO (RETRATO) */
-@media (max-width: 480px) {
-    .container {
-    justify-content: space-between;
-    padding-top: 70px;  /* Altura das imagens */
-    padding-bottom: 65px;
-    }
-
-    .menu {
-        gap: 20px;  /* Distancia entre as imagens */
-    }
-
-    .item img {
-        width: 120px; /* Tamanho das imagens */
-    }
-
-    .footer img {
-        width: 60px;  /* Tamanho das imagens Rodapé */
-    }
-
-    .footer {
-        bottom: 40px;  /* Altura das imagens Rodapé */
-        gap: 40px;  /* Distancia entre as imagens */
-    }
-}
-
-/* 📱 CELULAR PEQUENO DEITADO (ALTURA REALMENTE CURTA) */
-@media (max-height: 500px) and (orientation: landscape) {
-
-    .container {
-        justify-content: space-between;
-        padding-top: 60px;  /* Altura das imagens */
-        padding-bottom: 65px;
-    }
-
-    .menu {
-        gap: 40px; /* Distancia entre as imagens */
-    }
-
-    .item {
-        width: 120px; /* circulo das imagens */
-        height: 120px;
-    }
-
-    .item img {
-        width: 120px; /* Tamanho das imagens */
-    }
-
-    .footer {
-        bottom: 28px; /* Altura das imagens Rodapé */
-        gap: 40px; /* Distancia entre as imagens */
-    }
-
-    .footer img {
-        width: 58px; /* Tamanho das imagens Rodapé */
-    }
-
-    .footer span {
-        font-size: 11px; /* Tamanho das Letras Rodapé */
-    }
-}
-
-/* 📺 SMART TV / TV BOX GRANDES */
-@media (min-width: 1280px) {
-    .container {
-        justify-content: flex-start; /* topo */
-        align-items: center;         /* centro horizontal */
-    }
-
-    .menu {
-        width: 100%;
-        display: flex;
-        justify-content: center;     /* centro real */
-        margin-top: 22vh;
-    }
-
-    .menu .item {
-        margin: 0 2vw;  /* Distancia entre as imagens */
-    }
-
-    .footer .small {
-        margin: 0 5vw; /* Distancia entre as imagens Rodapé */
-    }
-
-    .item {
-        width: 280px; /* circulo das imagens */
-        height: 280px;
-    }
-
-    .item img {
-        width: 220px; /* Tamanho das imagens */
-    }
-
-    .footer img {
-        width: 80px; /* Tamanho das imagens Rodapé */
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megacubo Plus - ListaPlus Kodi Repos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B00FF; /* Roxo Megacubo Plus */
+            --secondary: #A100FF;
+            --bg: #0a0a0a;
+            --card: #1a1a2e;
+            --text: #ffffff;
+            --accent: #ff00ff;
+        }
+        [data-theme="light"] {
+            --bg: #f0f0f0;
+            --card: #ffffff;
+            --text: #333333;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 2rem; text-align: center; box-shadow: 0 4px 20px rgba(139,0,255,0.3); }
+        .logo { font-size: 3rem; background: rgba(255,255,255,0.2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 1rem; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{transform:scale(1);} 50%{transform:scale(1.05);} }
+        h1 { color: white; font-size: 2.5rem; }
+        .controls { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; padding: 2rem; background: var(--card); margin: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        input.search { padding: 1rem; border: none; border-radius: 50px; background: var(--bg); color: var(--text); width: 300px; font-size: 1.1rem; }
+        input.search::placeholder { color: #aaa; }
+        select.filter { padding: 1rem; border: none; border-radius: 50px; background: var(--primary); color: white; }
+        .theme-toggle { background: var(--accent); color: white; border: none; padding: 1rem 1.5rem; border-radius: 50px; cursor: pointer; font-size: 1.1rem; transition: all 0.3s; }
+        .theme-toggle:hover { transform: scale(1.05); }
+        #listaplus { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .list { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px,1fr)); gap: 2rem; }
+        .list-item { background: var(--card); border-radius: 20px; padding: 2rem; box-shadow: 0 10px 40px rgba(139,0,255,0.2); transition: all 0.3s; border: 2px solid transparent; }
+        .list-item:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 60px rgba(139,0,255,0.4); }
+        .list-item h3 { color: var(--primary); margin-bottom: 1rem; font-size: 1.5rem; }
+        .list-item p { margin-bottom: 1rem; }
+        .btn { background: var(--primary); color: white; padding: 0.8rem 2rem; border: none; border-radius: 50px; text-decoration: none; display: inline-block; transition: all 0.3s; }
+        .btn:hover { background: var(--secondary); transform: scale(1.05); }
+        .category { font-weight: bold; color: var(--accent); }
+        @media (max-width: 768px) { .controls { flex-direction: column; align-items: center; } input.search { width: 100%; } }
+    </style>
 </head>
-
-<body onclick="openFullscreen()">
-
-<div class="overlay"></div>
-
-<div class="container">
-
-    <div class="menu">
-        <a href="http://assistacore.com/painel.php?sessao=30d83N29h7YYanKUg6gKBb6E1WOL1kR4BKwRBbUgpdKUEZM2XEFqIqNNR8c3o30gsP35enG080HQUg3olThMLZGUvP1aGcxEqPaFGjT8KsJk7Qps7rDtqHprr3tZR0byqdtqg85ScE7Jv5UnEfu3hlGnQ2z25dhCHmv5q9yAZ8MaNYprQ8kqFh3b3GE32ab21C63m3l9rDvHMANKii8kpc7onr3npQPG46cp7Gz8xP9XatZ6USIGb6d1wuTuNcNr">
-            <div class="item">
-                <img src="https://wsbit.net/core/img/cat_tv.png">
-                <div class="label"></div>
-            </div>
-        </a>
-
-        <a href="http://assistacore.com/painel.php?sessao=30d83N29h7YYanKUg6gKBb6E1WOL1kR4BKwRBbUgpdKUEZM2XEFqIqNNR8c3o30gsP35enG080HQUg3olThMLZGUvP1aGcxEqPaFGjT8KsJk7Qps7rDtqHprr3tZR0byqdtqg85ScE7Jv5UnEfu3hlGnQ2z25dhCHmv5q9yAZ8MaNYprQ8kqFh3b3GE32ab21C63m3l9rDvHMANKii8kpc7onr3npQPG46cp7Gz8xP9XatZ6USIGb6d1wuTuNcNr">
-            <div class="item">
-                <img src="https://wsbit.net/core/img/cat_vod.png">
-                <div class="label"></div>
-            </div>
-        </a>
-
-        <a href="http://assistacore.com/painel.php?sessao=30d83N29h7YYanKUg6gKBb6E1WOL1kR4BKwRBbUgpdKUEZM2XEFqIqNNR8c3o30gsP35enG080HQUg3olThMLZGUvP1aGcxEqPaFGjT8KsJk7Qps7rDtqHprr3tZR0byqdtqg85ScE7Jv5UnEfu3hlGnQ2z25dhCHmv5q9yAZ8MaNYprQ8kqFh3b3GE32ab21C63m3l9rDvHMANKii8kpc7onr3npQPG46cp7Gz8xP9XatZ6USIGb6d1wuTuNcNr">
-            <div class="item">
-                <img src="https://wsbit.net/core/img/cat_series.png">
-                <div class="label"></div>
-            </div>
-        </a>
+<body>
+    <header>
+        <div class="logo"><i class="fas fa-cube"></i> Megacubo Plus</div>
+        <h1>ListaPlus - Repos Kodi</h1>
+        <p>Busque e instale repositórios version Kodi</p>
+    </header>
+    <div class="controls">
+        <input class="search" placeholder="Buscar repo ou versão..." />
+        <select class="filter">
+            <option value="">Todas Categorias</option>
+            <option value="Video">Vídeo</option>
+            <option value="Audio">Áudio</option>
+            <option value="Skins">Skins</option>
+        </select>
+        <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i> Dark Mode</button>
     </div>
-
-    <div class="footer">
-        <a href="http://assistacore.com/painel.php?sessao=30d83N29h7YYanKUg6gKBb6E1WOL1kR4BKwRBbUgpdKUEZM2XEFqIqNNR8c3o30gsP35enG080HQUg3olThMLZGUvP1aGcxEqPaFGjT8KsJk7Qps7rDtqHprr3tZR0byqdtqg85ScE7Jv5UnEfu3hlGnQ2z25dhCHmv5q9yAZ8MaNYprQ8kqFh3b3GE32ab21C63m3l9rDvHMANKii8kpc7onr3npQPG46cp7Gz8xP9XatZ6USIGb6d1wuTuNcNr">
-            <div class="small">
-                <img src="https://wsbit.net/core/img/cat_anime.png">
-                <span>ANIMES</span>
-            </div>
-        </a>
-
-        <a href="http://assistacore.com/painel.php?sessao=30d83N29h7YYanKUg6gKBb6E1WOL1kR4BKwRBbUgpdKUEZM2XEFqIqNNR8c3o30gsP35enG080HQUg3olThMLZGUvP1aGcxEqPaFGjT8KsJk7Qps7rDtqHprr3tZR0byqdtqg85ScE7Jv5UnEfu3hlGnQ2z25dhCHmv5q9yAZ8MaNYprQ8kqFh3b3GE32ab21C63m3l9rDvHMANKii8kpc7onr3npQPG46cp7Gz8xP9XatZ6USIGb6d1wuTuNcNr">
-            <div class="small">
-                <img src="https://wsbit.net/core/img/cat_radio.png">
-                <span>RÁDIO WEB</span>
-            </div>
-        </a>
-    </div>
-
-</div>
-
-<script>
-function openFullscreen() {
-    if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(()=>{});
-    }
-}
-</script>
-
+    <section id="listaplus">
+        <ul class="list" id="lista">
+            <li>
+                <h3><i class="fas fa-play-circle"></i> Repo Video Pro</h3>
+                <p class="category">Video</p>
+                <p>Versão Kodi 21 Omega. URL: <a href="#" class="btn">Instalar</a></p>
+                <p>V 2.0.1 - Atualizado 2026</p>
+            </li>
+            <li>
+                <h3><i class="fas fa-music"></i> Audio Plus</h3>
+                <p class="category">Audio</p>
+                <p>Suporte Músicas HD. <a href="#" class="btn">Instalar</a></p>
+                <p>V 1.5 - Stable</p>
+            </li>
+            <!-- Adicione mais itens aqui -->
+        </ul>
+    </section>
+    <script>
+        var listaOptions = {
+            valueNames: ['name', 'category'],
+            listClass: 'list',
+            searchClass: 'search',
+            sortClass: 'sort',
+            plugins: [ListPagination({})]
+        };
+        var lista = new List('listaplus', listaOptions);
+        document.querySelectorAll('.list-item').forEach(item => {
+            item.querySelector('.name').textContent = item.querySelector('h3').textContent;
+            item.querySelector('.category').classList.add('category');
+        });
+        function toggleTheme() {
+            document.body.dataset.theme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+        }
+    </script>
 </body>
 </html>
-
