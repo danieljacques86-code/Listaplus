@@ -1,22 +1,29 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<title>IPTV Premium</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- TODO: Set the document title to the name of your application -->
+    <title>StreamBox — Canais ao vivo, filmes e séries</title>
+    <meta name="description" content="Assista canais ao vivo, filmes e séries em qualquer dispositivo. Player IPTV moderno com favoritos.">
+    <meta name="author" content="StreamBox" />
+
+    
+    
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:title" content="StreamBox — Canais ao vivo, filmes e séries">
+  <meta name="twitter:title" content="StreamBox — Canais ao vivo, filmes e séries">
+  <meta property="og:description" content="Assista canais ao vivo, filmes e séries em qualquer dispositivo. Player IPTV moderno com favoritos.">
+  <meta name="twitter:description" content="Assista canais ao vivo, filmes e séries em qualquer dispositivo. Player IPTV moderno com favoritos.">
+  <meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1b9c2a3e-0fd9-4a4b-9e10-1f20418f8260/id-preview-dd994910--5ed7f4d5-bd9e-4deb-af7d-7ff8f6c9d3e6.lovable.app-1777472081322.png">
+  <meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1b9c2a3e-0fd9-4a4b-9e10-1f20418f8260/id-preview-dd994910--5ed7f4d5-bd9e-4deb-af7d-7ff8f6c9d3e6.lovable.app-1777472081322.png">
 </head>
 
-<body>
-
-<header>📺 IPTV Premium</header>
-
-<input type="text" id="search" placeholder="Buscar canal...">
-
-<video id="player" controls autoplay></video>
-
-<div id="conteudo"></div>
-
-<script src="script.js"></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
+
